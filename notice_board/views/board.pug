@@ -1,0 +1,42 @@
+
+
+html(lang='ko')
+    head 
+        meta(charset='utf-8')
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css")
+    body
+        h1 #{title} page
+        br
+        div(style="width:500px  ;margin:30px 30px 30px 30px")
+            div
+                h5 제목 : #{board.title}
+                p 작성자 : #{board.author}
+               
+                p #{board.contents}
+            br
+            hr
+            div 
+                p 댓글 
+                hr
+                - for (var x = 0; x < board.comments.length ; x++)
+                    p #{board.comments[x].author}  : #{board.comments[x].contents}
+            hr
+
+            form(action="/comment/write" method="POST")
+                input(type="text" name="id" value=board._id   hidden) 
+               
+                br
+                lable(for="author") author : 
+                input(type="text" name="author" class="form-control" style="width:100px")
+                lable(for="comments") 댓글: 
+                input(type="text" name="comments" class="form-control" style="width:300px") 
+                input(type="submit" value="전송"  class="btn btn-primary")
+
+       
+       
+
+       
+     
+
+
+    

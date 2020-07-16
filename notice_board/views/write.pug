@@ -1,0 +1,29 @@
+
+
+html(lang='ko')
+    head 
+        meta(charset='utf-8')
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css")
+       
+                 
+    body
+        h3 #{title} page
+        form( class="form-inline" action="/board/write" method="POST")
+            div(class="form-group" style=" padding: 10px ; margin:30px")
+                lable(for="title") title : 
+                input(type="text" name="title"  class="form-control" ) 
+                br
+                lable(for="contents") contents 
+                br
+                textarea(type="text" class="form-control" name="contents", cols="30", rows="10" )
+                br
+                lable(for="author" ) author : 
+                br
+                input(type="text" name="author"  class="form-control")
+                input(type="submit" value="전송"  class="btn btn-primary")
+        
+
+     
+
+
+    

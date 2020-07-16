@@ -1,0 +1,34 @@
+
+
+html(lang='ko')
+    head    
+        meta(charset='utf-8')
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css")
+
+    body
+       
+        div
+            
+            
+            h2  #{title}
+            div(style="width:500px ; text-align:center margin:30px 30px 30px 30px")
+                table(class="table table-striped")
+                    tr(tr class="active")
+                        th(width=50) 번호
+                        th(width=50) 목록
+                    - for (var x = 0; x < result.length ; x++)
+                         tr(class="active" style="width:10px text-align:center" )
+                            td()
+                                #{x+1}
+                            td()
+                                a(href ="/board/"+result[x].id) #{result[x].title}
+                
+                     
+            
+            //-         a(href ="/board/22}") :h3 #{board[i].title}
+             
+        a(href="write"):  button(class="btn btn-info") write
+
+        //h2  #{board.length} 문법 작성시 ㄹㄹ
+
+         
