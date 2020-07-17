@@ -7,9 +7,7 @@ html(lang='ko')
 
     body
        
-        div
-            
-            
+        div 
             h2  #{title}
             div(style="width:500px ; text-align:center margin:30px 30px 30px 30px")
                 table(class="table table-striped")
@@ -22,11 +20,7 @@ html(lang='ko')
                                 #{x+1}
                             td()
                                 a(href ="/board/"+result[x].id) #{result[x].title}
-                
-                     
-            
-            //-         a(href ="/board/22}") :h3 #{board[i].title}
-             
+               
         a(href="write"):  button(class="btn btn-info") write
 
         //h2  #{board.length} 문법 작성시 ㄹㄹ
